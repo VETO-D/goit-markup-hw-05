@@ -109,12 +109,23 @@ body {
   letter-spacing: 0.02em;
   color: var(--dark-color);
   transition: var(--animation);
+  position: relative;
 }
 
 .header-navigation-link:hover,
 .header-navigation-link:focus,
 .header-navigation-link.current {
   color: var(--hover-color);
+}
+
+.header-navigation-link.current::after {
+  content: "";
+  background-color: var(--hover-color);
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 44px;
 }
 
 
