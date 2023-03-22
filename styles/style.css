@@ -165,10 +165,11 @@ body {
   background-image: var(--l_grad), url(../images/bg_img.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 1440px;
+  max-width: 1440px;
   background-size: cover;
   padding-top: 188px;
   padding-bottom: 188px;
+  margin: 0 auto;
 }
 
 .hero-main {
@@ -664,7 +665,7 @@ border-color: var(--hover-color);
   transform: translate(-50%, -50%) scale(1);
   min-height: 576px;
   width: 408px;
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
   background-color: var(--modal-bg-color);
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -686,12 +687,22 @@ border-color: var(--hover-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: auto; 
-  padding: 0;
+  position: absolute;
+  top: 24px;
+  right: 24px;
 }
 
 .modal-btn-close-icon {
 fill: var(--dark-color);
+}
+
+.modal-btn-close:is(:hover, :focus){
+  background: var(--hover-color);
+  border-color: var(--hover-color);
+}
+
+.modal-btn-close:is(:hover, :focus)>.modal-btn-close-icon {
+  fill: #FFFFFF;
 }
 
 .is-hidden {
